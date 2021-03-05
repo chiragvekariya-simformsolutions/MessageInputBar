@@ -44,8 +44,8 @@ internal extension UITextView {
             let result = text.word(at: caretRange, with: delimiterSet)
             else { return nil }
         
-        let location = result.range.lowerBound.encodedOffset
-        let range = NSRange(location: location, length: result.range.upperBound.encodedOffset - location)
+        let location = result.range.lowerBound.utf16Offset(in: result.word)
+        let range = NSRange(location: location, length: result.range.upperBound.utf16Offset(in: result.word) - location)
         
         return (result.word, range)
     }
