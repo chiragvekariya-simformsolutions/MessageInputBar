@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
     # 2 - Version
     s.version = '0.4.1'
     s.pod_target_xcconfig = {
-      "SWIFT_VERSION" => "4.2",
+      "SWIFT_VERSION" => "5.0",
     }
 
-    s.swift_version = '4.2'
+    s.swift_version = '5.0'
 
     s.ios.deployment_target = '9.0'
     s.source = { :git => 'https://github.com/MessageKit/MessageInputBar.git', :tag => s.version }
